@@ -1,3 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %} {% endblock %}
+{% block content %} 
+<h1>Add new</h1>
+<form method="POST" action="" enctype="multipart/form-data"> {% csrf_token %}
+    <div class="field">
+        {{ form.as_p }}
+    </div>
+    <input class="button" type="submit" value="Send" />
+</form>
+{% endblock %}
